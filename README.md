@@ -1,6 +1,7 @@
 # SquigLight
 ## modification of CrinGraph for optical spectra
-forked from HarutoHiroki/PublicGraphTool
+forked from HarutoHiroki/PublicGraphTool.
+
 inspired by https://github.com/aphalo/photobiology and https://github.com/CheeseCube312/CCubes-Filter-Plotter
 
 # TODO (essential)
