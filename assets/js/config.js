@@ -31,7 +31,6 @@ const init_phones = ["Haruto 2024 Target", "AudioSense DT200"],// Optional. Whic
       targetRestoreLastUsed = false,				// Restore user's last-used target settings on load
       labelsPosition = "bottom-left",               // Up to four labels will be grouped in a specified corner. Accepts "top-left," bottom-left," "bottom-right," and "default"
       stickyLabels = true,                          // "Sticky" labels 
-      analyticsEnabled = true,                      // Enables Google Analytics 4 measurement of site usage
       extraEnabled = true,                          // Enable extra features
       extraUploadEnabled = true,                    // Enable upload function
       extraEQEnabled = true,                        // Enable parametic eq function
@@ -227,20 +226,6 @@ const linkSets = [
     }
 ];
 
-
-
-// Set up analytics
-function setupGraphAnalytics() {
-    if ( analyticsEnabled ) {
-        const pageHead = document.querySelector("head"),
-              graphAnalytics = document.createElement("script"),
-              graphAnalyticsSrc = "assets/js/graphAnalytics.js";
-        
-        graphAnalytics.setAttribute("src", graphAnalyticsSrc);
-        pageHead.append(graphAnalytics);
-    }
-}
-setupGraphAnalytics();
 
 
 

@@ -771,8 +771,6 @@ function saveGraph(ext) {
     fn(gr.node(), "graph."+ext, {scale:3})
         .then(()=>showControls(true));
     
-    // Analytics event
-    if (analyticsEnabled) { pushEventTag("clicked_download", targetWindow); }
 }
 doc.select("#download")
     .on("click", () => saveGraph("png"))
@@ -1215,8 +1213,6 @@ function setBaseline(b, no_transition) {
     table.selectAll("tr").select(".button")
         .classed("selected", p=>p===baseline.p);
     
-    // Analytics event
-    if (analyticsEnabled && b.p) { pushPhoneTag("baseline_set", b.p); }
 }
 function getBaseline(p) {
     let b = getAvg(p).map(d => d[1]+getOffset(p));
@@ -1970,8 +1966,6 @@ function showPhone(p, exclusive, suppressVariant, trigger) {
             // Scroll to selected
             if (trigger) { scrollToActive(); }
             
-            // Analytics event
-            if (analyticsEnabled) { pushPhoneTag("phone_displayed", p, trigger); }
         });
         return;
     }
@@ -2715,8 +2709,6 @@ function copyUrlInit() {
             copyUrlButton.classList.remove("clicked");
         }, 600);
         
-        // Analytics event
-        if (analyticsEnabled) { pushEventTag("clicked_copyUrl", targetWindow); }
     });
 }
 copyUrlInit();
@@ -2993,7 +2985,6 @@ function addExtra() {
         document.querySelector("div.select > div.selector-panel").style["display"] = "none";
         document.querySelector("div.select > div.extra-panel").style["display"] = "flex";
         document.querySelector("div.select").setAttribute("data-selected", "extra");
-        if (analyticsEnabled) { pushEventTag("clicked_equalizerTab", targetWindow); }
     };
     window.hideExtraPanel = (selectedList) => {
         document.querySelector("div.select > div.selector-panel").style["display"] = "flex";
@@ -4000,8 +3991,6 @@ function addTutorial() {
                 partsPrimary.setAttribute("tutorial-active", "true");
                 disableZoom();
                 
-                // Analytics event
-                if (analyticsEnabled) { pushEventTag("tutorial_activated", targetWindow, def.name); }
             } else {
                 partsPrimary.setAttribute("tutorial-active", "false");
             }

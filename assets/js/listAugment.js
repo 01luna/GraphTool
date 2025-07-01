@@ -328,11 +328,6 @@ function augmentList(phone) {
             }
             augmentsReviewLink.setAttribute('href', reviewLink);
             augmentsReviewLink.textContent = 'Review';
-            if (analyticsEnabled) {
-                augmentsReviewLink.addEventListener('click', function() {
-                    pushPhoneTag("clicked_review", phone);
-                });
-            }
 
             agumentsContainer.append(augmentsRow2);
         }
@@ -344,11 +339,6 @@ function augmentList(phone) {
             
             augmentsShopLink.setAttribute('href', shopLink);
             augmentsShopLink.textContent = shopLinkLabel;
-            if (analyticsEnabled) {
-                augmentsShopLink.addEventListener('click', function() {
-                    pushPhoneTag("clicked_store", phone);
-                });
-            }
 
             agumentsContainer.append(augmentsRow3);
         }
