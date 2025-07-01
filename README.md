@@ -1,50 +1,35 @@
-# Demo Page
-https://graphtool-demo.harutohiroki.com/
-
-# Changes
-- Added Equalizer (cred to Rohsa)
-- Added Uploads
-- Added Targets
-- Added Website link on graph (cred to MRS)
-- Re-themed graph window
-- Re-done Frequency Range definitions
-- Changed parser to universal parser
-- Removed Restricted mode (cuz I want to keep it free)
-- Reorganised code
-- Moved targets to a different folder for organization
-- Moved phone_book outside for easier access (reverted for squiglink compatibility)
-- Added a function to average all active graphs (requested by listener)
-- Custom Diffuse Field Tilt (requested by listener)
-- Restyled EQ tab
-- EQable pink noise in EQ tab (requested by listener)
-- Added the ability to upload your own test track to EQ (requested by rollo)
-- Added a button to disable and enable all EQ bands (requested by SK)
-- Tone generator now EQable (requested by SK)
-- Added a Channel balance slider
-- Added a song progress slider to the EQ demo section (requested by XiaoShe)
-- Added Ear Gain customisation to custom tilt (requested by listener)
-- Made any target tiltable (requested by listener)
-- Added Treble customisation to custom tilt (requested by listener)
-- Added a button to swap between different y-axis scales (requested by rollo)
-- Added Preference Bounds and Preference Bound scaling (requested by listener)
-- Reversed the "any target tiltable" feature, now applying tilt on target automatically if supported (requested by listener)
-- Per-measurement compensation (requested by listener)
-- Added support for Haruto's Graph Extension to apply eq to browserwide 
-- Made Preference Bounds better and not relying on a png anymore
-- Downloadable CSV of all active graphs
-- Per page Y scaling (requested by listener)
-- Added a Graph Customisation menu
-- Added Translations (Thanks to potatosalad775) (removed for now due to not having enough translations, will be added back soon)
-- Added the 90% Inclusion Zone feature (requested and long awaited by the community)
+# SquigLight
+## modification of CrinGraph for optical spectra
+forked from HarutoHiroki/PublicGraphTool
+inspired by https://github.com/aphalo/photobiology and https://github.com/CheeseCube312/CCubes-Filter-Plotter
 
 # TODO
-- Implement a way to measure the SPL of an IEM and decide whether to upload it or not, skipping REW
-  - ability to select which mic/output to use
-  - ability to select calibration files
-  - ability to apply smoothing
-- Trace Arithmetic
-- Realtime Analysis
-- EQ upload to hardware
+- [ ] remove headphone-related data/code unapplicable to optical spectra
+- [ ] adapt code for use with optical spectra
+  - [ ] change axes from Hz/dB to nm/transmittance
+  - [ ] replace bass/mid/treble zoom with ISO 20473-1 wavebands
+  - [ ] replace tutorial button regions with wavebands relevant to photography
+  - [ ] add spectral data and facilititate adding more; likely either modify existing structure or create a script for conversion
+  - [ ] adapt EQ code to work with optical spectra; will act as a basic filter designer
+  - [ ] calculate and graph total transmitance
+  - [ ] replace baseline button with toggle for inclusion in total
+# TODO (extra features)
+- [ ] display bar on bottom of graph window colored according to percieved color for wavelengths 
+- [ ] use colors derived from filer spectra rather than randomly generated
+- [ ] display spectral sensitivity curves alongside filter spectra
+  - [ ] CIE 1931 2° and 10° color matching functions 
+  - [ ]	potentially include estimated spectra from https://doi.org/10.48550/arXiv.2304.11549; these are decently accurate, but not suitable for most purposes as the in-camera UV/IR cut filters are included.  
+  - [ ] find and compile publically available measurements for CMOS/CCD sensors and consumer digital cameras
+  - [ ] spectral sensitivity data for photographic film
+- [ ] add plotting of irradiance spectra
+- [ ] add preview functionality
+    - [ ] preview of filter effect using ICVL hyperspectral images
+    - [ ] color estimation for vegetation and skin tones using selected reflectance spectra
+    - [ ] show irradiance spectrum on graph when hovered
+- [ ] customizable color matrix that acts on spectral sensitivity curves
+    - [ ] potentially include color matrices supplied by adobe DNG converter
+- [ ] (maybe) add filter->filter LUT creation functionality based on https://doi.org/10.1109/ICCVW.2017.63
+
 
 # Contributors
 <a href="https://github.com/HarutoHiroki/PublicGraphTool/graphs/contributors">
