@@ -4,7 +4,7 @@ forked from HarutoHiroki/PublicGraphTool.
 
 inspired by https://github.com/aphalo/photobiology and https://github.com/CheeseCube312/CCubes-Filter-Plotter
 
-# TODO (essential)
+### TODO (essential)
 - [ ] remove headphone-related data/code unapplicable to optical spectra
 - [ ] adapt code for use with optical spectra
   - [ ] change axes from Hz/dB to nm/transmittance
@@ -14,7 +14,7 @@ inspired by https://github.com/aphalo/photobiology and https://github.com/Cheese
   - [ ] adapt EQ code to work with optical spectra; will act as a basic filter designer
   - [ ] calculate and graph total transmitance
   - [ ] replace baseline button with toggle for inclusion in total
-# TODO (features)
+### TODO (features)
 - [ ] display bar on bottom of graph window colored according to percieved color for wavelengths 
 - [ ] use colors derived from filer spectra rather than randomly generated
 - [ ] display spectral sensitivity curves alongside filter spectra
@@ -30,7 +30,15 @@ inspired by https://github.com/aphalo/photobiology and https://github.com/Cheese
 - [ ] customizable color matrix that acts on spectral sensitivity curves
     - [ ] potentially include color matrices supplied by adobe DNG converter
 - [ ] (maybe) add filter->filter LUT creation functionality based on https://doi.org/10.1109/ICCVW.2017.63
+    - [ ] preview using uploaded image as hsi instead of ICVL hsi
 - [ ] redesign UI/layout
+
+&nbsp;
+
+&nbsp;  
+  
+---
+&nbsp;
 
 
 # Contributors
